@@ -85,6 +85,11 @@ void delete_task()
 
 void sort_tasks(sort_func compare)
 {
+    if(task_count == 0)
+    {
+        printf("Task list is NULL\n");
+        return 0;
+    }
     for(int i = 0 ; i < task_count-1 ; i ++)
     {
         for(int j = 0 ; i < task_count - i - 1 ; j ++)
@@ -121,7 +126,8 @@ int compare_by_priority(Task t1,Task t2)
 {
     if(t1.priority == t2.priority)
     {
-        printf("Both Tasks are due on same date\n");
+        printf("Both Tasks have same priority\n");
+        return;
     }
     return t1.priority = t2.priority;
 }
@@ -131,6 +137,7 @@ int compare_by_due_date(Task t1,Task t2)
     if(strcmp(t1.due_date,t2.due_date) == 0)
     {
         printf("Both Tasks are due on same date\n");
+        return;
     }
     return strcmp(t1.due_date,t2.due_date);
 }
