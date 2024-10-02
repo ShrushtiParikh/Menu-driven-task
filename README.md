@@ -4,11 +4,10 @@
 
 In this project, I learnt how to create a Menu-Driven Task Scheduler in C using function pointers.
 
-By the end of this project, you'll have built a functional task scheduler where you can:
+A functional task scheduler where you can:
 - Add tasks with descriptions, due dates, and priorities.
 - View a list of tasks.
 - Delete tasks by their ID.
-- Dynamically sort tasks by priority or due date using function pointers.
 - Persist data across program runs by saving tasks to a file.
 
 ## File Structure
